@@ -1,0 +1,13 @@
+//- layout.pug
+doctype html
+html(lang="en")
+    head
+        block title
+            title rdenn.is
+                if title && title.trim && title.trim()
+                    | - #{title}
+        block styles
+        block head-scripts
+    body
+        block content
+        block body-scripts
