@@ -7,11 +7,11 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-    res.status(200).render('index');
+    res.render('index');
 });
 
 app.get(/.*/, (req, res) => {
-    res.status(404).render('404', { title: '404' });
+    res.render('index');
 });
 
 if (module === require.main) {
