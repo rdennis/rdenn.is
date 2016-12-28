@@ -3,6 +3,8 @@
 const express = require('express');
 
 const app = express();
+const env = app.locals.env = process.env.NODE_ENV || 'production';
+
 app.set('views', './views');
 app.set('view engine', 'pug');
 
