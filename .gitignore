@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# Heroku .env
+.env
+
 # Runtime data
 pids
 *.pid
