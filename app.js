@@ -9,7 +9,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { home: true });
 });
 
 app.get(/.*/, (req, res) => {

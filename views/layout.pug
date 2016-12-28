@@ -1,4 +1,14 @@
 //- layout.pug
+- var showEnv = typeof env === 'string' && env !== 'production'
+
+mixin linkOrDiv(anchor, href)
+    div&attributes(attributes)
+        if anchor
+            a(href=href)&attributes(attributes)
+                block
+        else 
+            block
+
 doctype html
 html(lang="en")
     head
@@ -6,10 +16,15 @@ html(lang="en")
             title rdenn.is
                 if title && title.trim && title.trim()
                     |  - #{title}
-                if typeof env === 'string' && env !== 'production'
+                if showEnv
                     |  : #{env}
         block styles
         block head-scripts
     body
+        header
+            +linkOrDiv(!home, '/')(class='home')
+                | rdenn.is
+                if showEnv
+                    |  : #[span.env #{env}]
         block content
         block body-scripts
