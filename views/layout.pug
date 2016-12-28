@@ -5,9 +5,9 @@ html(lang="en")
         block title
             title rdenn.is
                 if title && title.trim && title.trim()
-                    | - #{title}
+                    |  - #{title}
                 if typeof env === 'string' && env !== 'production'
-                    |  #{env}
+                    |  : #{env}
         block styles
         block head-scripts
     body
