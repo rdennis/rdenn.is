@@ -1,27 +1,29 @@
 {
-  "name": "rdenn.is",
-  "description": "My personal website.",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "generate-types": "wrangler types"
-  },
-  "dependencies": {
-    "@astrojs/cloudflare": "^13.7.0",
-    "astro": "^6.4.8"
-  },
-  "devDependencies": {
-    "@types/node": "^26.0.0",
-    "wrangler": "^4.103.0"
-  },
-  "overrides": {
-    "vite": "^7"
-  }
+	"name": "rdenn.is",
+	"description": "My personal website.",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && astro preview",
+		"astro": "astro",
+		"generate-types": "wrangler types",
+		"deploy": "astro build && wrangler deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^13.7.0",
+		"@picocss/pico": "^2.1.1",
+		"astro": "^6.4.7"
+	},
+	"devDependencies": {
+		"wrangler": "^4.103.0"
+	},
+	"overrides": {
+		"vite": "^7"
+	}
 }

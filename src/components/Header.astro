@@ -1,0 +1,25 @@
+<header>
+	<div class="container">
+		<hgroup>
+			<h1>Robert Dennis</h1>
+			<p>Senior Software Engineer</p>
+		</hgroup>
+	</div>
+</header>
+
+<style>
+	h1 {
+		&::before,
+		&::after {
+			color: var(--pico-primary);
+		}
+
+		&::before {
+			content: "[ ";
+		}
+
+		&::after {
+			content: " ]";
+		}
+	}
+</style>
