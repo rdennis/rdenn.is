@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://rdennis.github.io/rdenn.is/',
-    base: '/rdenn.is',
+  adapter: cloudflare(),
 });

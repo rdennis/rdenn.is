@@ -22,3 +22,15 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Wrangler generated files
+.wrangler/
+dist/
+build/
+out/
+.worker-next/
+*.js.map
+*.ts.map
+
+# Local Secrets 
+.dev.vars
